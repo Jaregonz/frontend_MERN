@@ -43,7 +43,7 @@ const CrearUsuario = ({isAuthenticated}) => {
     }
 
     try {
-      await axios.post("http://localhost:4000/api/usuarios", formData, {
+      await axios.post("https://backend-mern-yr4j.onrender.com/api/usuarios", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
