@@ -43,7 +43,7 @@ const CrearUsuario = ({isAuthenticated}) => {
     }
 
     try {
-      await axios.post("http://localhost:4000/api/usuarios", formData, {
+      await axios.post("https://backend-mern-yr4j.onrender.com/api/usuarios", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
@@ -71,7 +71,7 @@ const CrearUsuario = ({isAuthenticated}) => {
     }
 
     try {
-      await axios.put(`http://localhost:4000/api/usuarios/${subId}`, formData, {
+      await axios.put(`https://backend-mern-yr4j.onrender.com/usuarios/${subId}`, formData, {
         headers: {
           "Content-Type": "multipart/form-data", 
         },
@@ -87,7 +87,7 @@ const CrearUsuario = ({isAuthenticated}) => {
 
   const obtUno = async (id) => {
     try {
-      const res = await axios.get(`http://localhost:4000/api/usuarios/${id}`);
+      const res = await axios.get(`https://backend-mern-yr4j.onrender.com/api/usuarios/${id}`);
       setUsuario({
         nombre: res.data.nombre,
         apellido: res.data.apellido,
